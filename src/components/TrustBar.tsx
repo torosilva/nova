@@ -19,7 +19,7 @@ export const TrustBar: React.FC = () => {
         <section
             id="trust-bar"
             style={{
-                padding: '8rem 0',
+                padding: '10rem 0', // Massive breathing room
                 backgroundColor: 'white',
                 borderTop: '1px solid #F1F5F9',
                 borderBottom: '1px solid #F1F5F9',
@@ -30,28 +30,28 @@ export const TrustBar: React.FC = () => {
             <div className="container" style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '8rem',
+                gap: '10rem', // Massive separation for authority
                 alignItems: 'center'
             }}>
 
-                {/* Ecosystem Segment */}
-                <div style={{ width: '100%', maxWidth: '1000px', textAlign: 'center' }}>
+                {/* Ecosystem Segment - FORCED SCALE */}
+                <div style={{ width: '100%', maxWidth: '1200px', textAlign: 'center' }}>
                     <h4 style={{
-                        fontSize: '0.8rem',
+                        fontSize: '1rem',
                         fontWeight: 900,
                         color: 'var(--color-brand-blue)',
                         letterSpacing: '0.6em',
                         textTransform: 'uppercase',
-                        marginBottom: '4rem',
-                        opacity: 0.9
+                        marginBottom: '5rem',
+                        opacity: 1
                     }}>
-                        Powering our Ecosystem
+                        Ecosystem Partners
                     </h4>
                     <div style={{
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        gap: '6rem',
+                        gap: '8rem',
                         flexWrap: 'wrap'
                     }}>
                         {[
@@ -65,21 +65,17 @@ export const TrustBar: React.FC = () => {
                                 src={logo.src}
                                 alt={logo.alt}
                                 style={{
-                                    height: '56px', // Bold, prominent height
+                                    height: '120px', // FORCED MASSIVE HEIGHT
                                     width: 'auto',
-                                    filter: 'grayscale(100%)',
-                                    opacity: 0.7,
-                                    transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                                    filter: 'none', // Removed filters for full visibility
+                                    opacity: 1,     // Removed opacity for full visibility
+                                    transition: 'all 0.4s ease',
                                     cursor: 'pointer'
                                 }}
                                 onMouseEnter={(e) => {
-                                    e.currentTarget.style.filter = 'grayscale(0%)';
-                                    e.currentTarget.style.opacity = '1';
-                                    e.currentTarget.style.transform = 'translateY(-5px) scale(1.05)';
+                                    e.currentTarget.style.transform = 'translateY(-10px) scale(1.1)';
                                 }}
                                 onMouseLeave={(e) => {
-                                    e.currentTarget.style.filter = 'grayscale(100%)';
-                                    e.currentTarget.style.opacity = '0.7';
                                     e.currentTarget.style.transform = 'translateY(0) scale(1)';
                                 }}
                             />
@@ -87,16 +83,16 @@ export const TrustBar: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Clients Segment */}
-                <div style={{ width: '100%', maxWidth: '1200px', textAlign: 'center' }}>
+                {/* Clients Segment - FORCED SCALE */}
+                <div style={{ width: '100%', maxWidth: '1400px', textAlign: 'center' }}>
                     <h4 style={{
-                        fontSize: '0.8rem',
+                        fontSize: '1rem',
                         fontWeight: 900,
                         color: 'var(--color-brand-blue)',
                         letterSpacing: '0.6em',
                         textTransform: 'uppercase',
-                        marginBottom: '4rem',
-                        opacity: 0.9
+                        marginBottom: '5rem',
+                        opacity: 1
                     }}>
                         Nuestros Clientes
                     </h4>
@@ -104,7 +100,7 @@ export const TrustBar: React.FC = () => {
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        gap: '5rem',
+                        gap: '6rem',
                         flexWrap: 'wrap'
                     }}>
                         {[
@@ -120,21 +116,17 @@ export const TrustBar: React.FC = () => {
                                 src={logo.src}
                                 alt={logo.alt}
                                 style={{
-                                    height: '72px', // Larger for diverse client logos
+                                    height: '150px', // FORCED MASSIVE HEIGHT
                                     width: 'auto',
-                                    filter: 'grayscale(100%)',
-                                    opacity: 0.6,
-                                    transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                                    cursor: 'pointer'
+                                    filter: 'none',
+                                    opacity: 1,
+                                    transition: 'all 0.4s ease',
+                                    border: '1px solid transparent' // Placeholder for potential alignment fixes
                                 }}
                                 onMouseEnter={(e) => {
-                                    e.currentTarget.style.filter = 'grayscale(0%)';
-                                    e.currentTarget.style.opacity = '1';
-                                    e.currentTarget.style.transform = 'translateY(-5px) scale(1.05)';
+                                    e.currentTarget.style.transform = 'translateY(-10px) scale(1.1)';
                                 }}
                                 onMouseLeave={(e) => {
-                                    e.currentTarget.style.filter = 'grayscale(100%)';
-                                    e.currentTarget.style.opacity = '0.6';
                                     e.currentTarget.style.transform = 'translateY(0) scale(1)';
                                 }}
                             />
