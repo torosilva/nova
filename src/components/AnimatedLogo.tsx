@@ -21,10 +21,6 @@ export const AnimatedLogo: React.FC = () => {
         { x: 50, yBase: 65, size: 2.2, color: '#00E5FF', delay: 0.8 }
     ];
 
-    // Calculate flask sway and tilt based on scroll
-    const tilt = (Math.sin(scrollY * 0.05) * 2); // Subtle tilt -2 to 2 deg
-    const sway = (Math.cos(scrollY * 0.05) * 3); // Subtle sway -3 to 3 px
-
     return (
         <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
             <img
@@ -35,13 +31,11 @@ export const AnimatedLogo: React.FC = () => {
                     width: 'auto',
                     objectFit: 'contain',
                     position: 'relative',
-                    zIndex: 1,
-                    transform: `translateX(${sway}px) rotate(${tilt}deg)`,
-                    transition: 'transform 0.15s ease-out'
+                    zIndex: 1
                 }}
             />
 
-            {/* Animation Overlay Container - Moves with the flask */}
+            {/* Animation Overlay Container */}
             <div style={{
                 position: 'absolute',
                 top: '12%', // Calibrated for the flask part of the logo
@@ -50,10 +44,7 @@ export const AnimatedLogo: React.FC = () => {
                 height: '45%',
                 pointerEvents: 'none',
                 zIndex: 2,
-                overflow: 'visible',
-                transform: `translateX(${sway}px) rotate(${tilt}deg)`,
-                transition: 'transform 0.15s ease-out',
-                transformOrigin: 'bottom center'
+                overflow: 'visible'
             }}>
                 <svg viewBox="0 0 100 100" style={{ width: '100%', height: '100%' }}>
                     <defs>
