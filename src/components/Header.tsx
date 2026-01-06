@@ -23,7 +23,7 @@ export const Header: React.FC = () => {
                 backgroundColor: 'rgba(255, 255, 255, 0.8)',
                 backdropFilter: 'blur(10px)',
                 WebkitBackdropFilter: 'blur(10px)',
-                padding: '0.75rem 1.5rem',
+                padding: '0.4rem 1.25rem',
                 borderRadius: '24px',
                 border: '1px solid rgba(255, 255, 255, 0.3)',
                 boxShadow: '0 10px 30px rgba(0,0,0,0.05)',

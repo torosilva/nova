@@ -32,8 +32,12 @@
 
 @media (max-width: 768px) {
   :root {
-    --spacing-section: 4rem;
+    --spacing-section: 5rem;
   }
+}
+
+section {
+  scroll-margin-top: 140px;
 }
 
 * {
