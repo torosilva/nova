@@ -1,6 +1,6 @@
 import React from 'react';
-import partnerLogos from '../assets/partner-logos-v2.png';
-import clientLogos from '../assets/client-logos-v2.png';
+import partnerLogos from '../assets/partner-logos-v3.png';
+import clientLogos from '../assets/client-logos-v3.png';
 
 export const TrustBar: React.FC = () => {
     return (
@@ -21,23 +21,22 @@ export const TrustBar: React.FC = () => {
                 width: '100%'
             }}>
 
-                {/* Ecosystem Segment - Adjusted Window */}
-                <div style={{ width: '100%', maxWidth: '950px', textAlign: 'center' }}>
+                {/* Ecosystem Segment - Stable Ribbon Layout */}
+                <div style={{ width: '100%', maxWidth: '1000px', textAlign: 'center' }}>
                     <h4 style={{
                         fontSize: '0.85rem',
                         fontWeight: 900,
                         color: 'var(--color-brand-blue)',
                         letterSpacing: '0.4em',
                         textTransform: 'uppercase',
-                        marginBottom: '1rem'
+                        marginBottom: '2rem'
                     }}>
                         Ecosystem
                     </h4>
                     <div style={{
                         width: '100%',
-                        height: '110px',
-                        overflow: 'hidden',
-                        position: 'relative',
+                        display: 'flex',
+                        justifyContent: 'center',
                         opacity: 0.8
                     }}>
                         <img
@@ -46,34 +45,30 @@ export const TrustBar: React.FC = () => {
                             style={{
                                 width: '100%',
                                 height: 'auto',
-                                position: 'absolute',
-                                top: '50%',
-                                left: '50%',
-                                transform: 'translate(-50%, -50%) scale(1.15)',
+                                maxHeight: '60px', // Perfect visibility height
                                 filter: 'grayscale(100%) contrast(1.1)',
-                                pointerEvents: 'none'
+                                objectFit: 'contain'
                             }}
                         />
                     </div>
                 </div>
 
-                {/* Clients Segment - Adjusted Window */}
-                <div style={{ width: '100%', maxWidth: '1000px', textAlign: 'center' }}>
+                {/* Clients Segment - Stable Ribbon Layout */}
+                <div style={{ width: '100%', maxWidth: '1100px', textAlign: 'center' }}>
                     <h4 style={{
                         fontSize: '0.85rem',
                         fontWeight: 900,
                         color: 'var(--color-brand-blue)',
                         letterSpacing: '0.4em',
                         textTransform: 'uppercase',
-                        marginBottom: '1rem'
+                        marginBottom: '2rem'
                     }}>
                         Clientes
                     </h4>
                     <div style={{
                         width: '100%',
-                        height: '120px',
-                        overflow: 'hidden',
-                        position: 'relative',
+                        display: 'flex',
+                        justifyContent: 'center',
                         opacity: 0.8
                     }}>
                         <img
@@ -82,12 +77,9 @@ export const TrustBar: React.FC = () => {
                             style={{
                                 width: '100%',
                                 height: 'auto',
-                                position: 'absolute',
-                                top: '50%',
-                                left: '50%',
-                                transform: 'translate(-50%, -50%) scale(1.2)',
+                                maxHeight: '70px', // Slightly larger for SME logos
                                 filter: 'grayscale(100%) contrast(1.1)',
-                                pointerEvents: 'none'
+                                objectFit: 'contain'
                             }}
                         />
                     </div>
@@ -96,11 +88,8 @@ export const TrustBar: React.FC = () => {
             </div>
 
             <style>{`
-                .container > div:hover div {
-                    opacity: 1;
-                    transition: all 0.4s ease;
-                }
-                .container > div:hover img {
+                img:hover {
+                    opacity: 1 !important;
                     filter: grayscale(0%) brightness(1) !important;
                     transition: all 0.4s ease;
                 }
