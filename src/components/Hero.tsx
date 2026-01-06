@@ -4,13 +4,11 @@ import React from 'react';
 export const Hero: React.FC = () => {
     return (
         <section style={{
-            minHeight: '90vh',
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center',
             alignItems: 'center',
             textAlign: 'center',
-            padding: '160px 1rem 0',
+            padding: '180px 1rem 8rem',
             background: 'radial-gradient(circle at 50% 50%, rgba(41, 98, 255, 0.03) 0%, transparent 70%)' // Subtle lab glow
         }}>
 

@@ -26,40 +26,39 @@ export const TrustBar: React.FC = () => {
         <section
             ref={sectionRef}
             style={{
-                padding: '0.25rem 0 1rem',
+                padding: '4rem 0',
                 backgroundColor: 'white',
                 borderBottom: '1px solid #F1F5F9',
                 position: 'relative',
                 zIndex: 5,
-                overflow: 'hidden',
-                marginTop: '-1px'
+                overflow: 'hidden'
             }}
         >
-            <div className="container">
+            <div className="container" style={{
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
+                transition: 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+                transitionDelay: '0.3s'
+            }}>
                 <div style={{
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
-                    gap: '0.5rem',
-                    opacity: isVisible ? 1 : 0,
-                    transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(100px) scale(0.8)',
-                    transition: 'all 1.2s cubic-bezier(0.16, 1, 0.3, 1)',
-                    willChange: 'transform, opacity'
+                    gap: '1.5rem',
                 }}>
                     <span style={{
-                        fontSize: '0.65rem',
-                        fontWeight: 800,
-                        color: '#94A3B8',
-                        letterSpacing: '0.3em',
-                        textTransform: 'uppercase',
-                        marginBottom: '0.25rem'
+                        fontSize: '0.8rem',
+                        fontWeight: 700,
+                        color: '#64748B',
+                        letterSpacing: '0.2em',
+                        textTransform: 'uppercase'
                     }}>
                         Nuestra Experiencia está Validada por
                     </span>
 
                     <div style={{
                         width: '100%',
-                        maxWidth: '850px',
+                        maxWidth: '650px',
                         opacity: 0.6,
                         filter: 'grayscale(100%) contrast(1.1)',
                         transition: 'all 0.5s ease',
@@ -72,7 +71,6 @@ export const TrustBar: React.FC = () => {
                             style={{
                                 width: '100%',
                                 height: 'auto',
-                                maxWidth: '750px',
                                 objectFit: 'contain'
                             }}
                         />
@@ -84,11 +82,12 @@ export const TrustBar: React.FC = () => {
                 .trust-logos:hover {
                     opacity: 1 !important;
                     filter: grayscale(0%) brightness(1) !important;
-                    transform: scale(1.02) !important;
+                    transform: scale(1.02);
                 }
                 @media (max-width: 768px) {
                     .trust-logos {
                         max-width: 100%;
+                        padding: 0 1.5rem;
                     }
                 }
             `}</style>
