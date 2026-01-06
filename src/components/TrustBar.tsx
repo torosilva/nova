@@ -26,12 +26,13 @@ export const TrustBar: React.FC = () => {
         <section
             ref={sectionRef}
             style={{
-                padding: '1rem 0 2rem',
+                padding: '0.25rem 0 1rem',
                 backgroundColor: 'white',
-                borderBottom: '1px solid #F8FAFC',
+                borderBottom: '1px solid #F1F5F9',
                 position: 'relative',
                 zIndex: 5,
-                overflow: 'hidden'
+                overflow: 'hidden',
+                marginTop: '-1px'
             }}
         >
             <div className="container">
@@ -39,18 +40,19 @@ export const TrustBar: React.FC = () => {
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
-                    gap: '0.75rem',
+                    gap: '0.5rem',
+                    opacity: isVisible ? 1 : 0,
+                    transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(100px) scale(0.8)',
+                    transition: 'all 1.2s cubic-bezier(0.16, 1, 0.3, 1)',
+                    willChange: 'transform, opacity'
                 }}>
                     <span style={{
                         fontSize: '0.65rem',
-                        fontWeight: 700,
+                        fontWeight: 800,
                         color: '#94A3B8',
-                        letterSpacing: '0.25em',
+                        letterSpacing: '0.3em',
                         textTransform: 'uppercase',
-                        opacity: isVisible ? 1 : 0,
-                        transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
-                        transition: 'all 0.6s ease-out',
-                        transitionDelay: '0.2s'
+                        marginBottom: '0.25rem'
                     }}>
                         Nuestra Experiencia está Validada por
                     </span>
@@ -58,11 +60,9 @@ export const TrustBar: React.FC = () => {
                     <div style={{
                         width: '100%',
                         maxWidth: '850px',
-                        opacity: isVisible ? 0.6 : 0,
-                        filter: isVisible ? 'grayscale(100%) contrast(1.1)' : 'grayscale(100%) blur(5px)',
-                        transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(40px) scale(0.9)',
-                        transition: 'all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                        transitionDelay: '0.4s',
+                        opacity: 0.6,
+                        filter: 'grayscale(100%) contrast(1.1)',
+                        transition: 'all 0.5s ease',
                         display: 'flex',
                         justifyContent: 'center'
                     }} className="trust-logos">
