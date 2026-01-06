@@ -21,21 +21,21 @@ export const TrustBar: React.FC = () => {
                 width: '100%'
             }}>
 
-                {/* Ecosystem Segment - Fixed Aspect Ratio Cropping */}
-                <div style={{ width: '100%', maxWidth: '900px', textAlign: 'center' }}>
+                {/* Ecosystem Segment - Adjusted Window */}
+                <div style={{ width: '100%', maxWidth: '950px', textAlign: 'center' }}>
                     <h4 style={{
                         fontSize: '0.85rem',
                         fontWeight: 900,
                         color: 'var(--color-brand-blue)',
                         letterSpacing: '0.4em',
                         textTransform: 'uppercase',
-                        marginBottom: '1.5rem'
+                        marginBottom: '1rem'
                     }}>
                         Ecosystem
                     </h4>
                     <div style={{
                         width: '100%',
-                        height: '70px', // The visible "window" for the logos
+                        height: '110px',
                         overflow: 'hidden',
                         position: 'relative',
                         opacity: 0.8
@@ -49,7 +49,7 @@ export const TrustBar: React.FC = () => {
                                 position: 'absolute',
                                 top: '50%',
                                 left: '50%',
-                                transform: 'translate(-50%, -50%) scale(1.4)', // Zoom in to hide the square's white space
+                                transform: 'translate(-50%, -50%) scale(1.15)',
                                 filter: 'grayscale(100%) contrast(1.1)',
                                 pointerEvents: 'none'
                             }}
@@ -57,7 +57,7 @@ export const TrustBar: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Clients Segment - Fixed Aspect Ratio Cropping */}
+                {/* Clients Segment - Adjusted Window */}
                 <div style={{ width: '100%', maxWidth: '1000px', textAlign: 'center' }}>
                     <h4 style={{
                         fontSize: '0.85rem',
@@ -65,13 +65,13 @@ export const TrustBar: React.FC = () => {
                         color: 'var(--color-brand-blue)',
                         letterSpacing: '0.4em',
                         textTransform: 'uppercase',
-                        marginBottom: '1.5rem'
+                        marginBottom: '1rem'
                     }}>
                         Clientes
                     </h4>
                     <div style={{
                         width: '100%',
-                        height: '80px', // The visible "window" for the SME logos
+                        height: '120px',
                         overflow: 'hidden',
                         position: 'relative',
                         opacity: 0.8
@@ -85,7 +85,7 @@ export const TrustBar: React.FC = () => {
                                 position: 'absolute',
                                 top: '50%',
                                 left: '50%',
-                                transform: 'translate(-50%, -50%) scale(1.6)', // Zoom in more to hide margins
+                                transform: 'translate(-50%, -50%) scale(1.2)',
                                 filter: 'grayscale(100%) contrast(1.1)',
                                 pointerEvents: 'none'
                             }}
