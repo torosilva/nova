@@ -6,7 +6,7 @@ export const TrustBar: React.FC = () => {
     return (
         <section
             style={{
-                padding: '0.5rem 0 1.5rem',
+                padding: '3rem 0',
                 backgroundColor: 'white',
                 borderBottom: '1px solid #F1F5F9',
                 position: 'relative',
@@ -16,87 +16,102 @@ export const TrustBar: React.FC = () => {
             <div className="container" style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '0.25rem', // Minimal gap between labels and logos
+                gap: '4rem',
                 alignItems: 'center'
             }}>
 
-                {/* Ecosystem Segment */}
-                <div style={{ width: '100%', textAlign: 'center' }}>
-                    <span style={{
-                        fontSize: '0.65rem',
-                        fontWeight: 800,
-                        color: '#94A3B8',
-                        letterSpacing: '0.2em',
-                        textTransform: 'uppercase',
-                        display: 'block',
-                        marginBottom: '-0.5rem' // Tighten label to image
-                    }}>
-                        Ecosystem
-                    </span>
+                {/* Ecosystem Segment - Large & Horizontal */}
+                <div style={{ width: '100%', maxWidth: '1100px', textAlign: 'center' }}>
                     <div style={{
-                        width: '100%',
-                        height: '100px', // Force a small height to "crop" image whitespace
                         display: 'flex',
+                        flexDirection: 'column',
                         alignItems: 'center',
-                        justifyContent: 'center',
-                        overflow: 'hidden'
+                        gap: '2.5rem',
                     }}>
-                        <img
-                            src={partnerLogos}
-                            alt="Ecosystem Partners"
-                            style={{
-                                height: '180px', // Scaling it up within a smaller container to crop whitespace
-                                width: 'auto',
-                                opacity: 0.7,
-                                filter: 'grayscale(100%) contrast(1.1)',
-                                objectFit: 'contain'
-                            }}
-                        />
+                        <span style={{
+                            fontSize: '0.85rem',
+                            fontWeight: 800,
+                            color: 'var(--color-brand-blue)',
+                            letterSpacing: '0.3em',
+                            textTransform: 'uppercase',
+                        }}>
+                            Ecosystem
+                        </span>
+
+                        <div style={{
+                            width: '100%',
+                            opacity: 0.8,
+                            filter: 'grayscale(100%) contrast(1.1)',
+                            display: 'flex',
+                            justifyContent: 'center'
+                        }} className="logos-row">
+                            <img
+                                src={partnerLogos}
+                                alt="Ecosystem Partners"
+                                style={{
+                                    width: '100%',
+                                    height: 'auto',
+                                    maxHeight: '75px',
+                                    maxWidth: '850px',
+                                    objectFit: 'contain'
+                                }}
+                            />
+                        </div>
                     </div>
                 </div>
 
-                {/* Clients Segment */}
-                <div style={{ width: '100%', textAlign: 'center', marginTop: '-1rem' }}>
-                    <span style={{
-                        fontSize: '0.65rem',
-                        fontWeight: 800,
-                        color: '#94A3B8',
-                        letterSpacing: '0.2em',
-                        textTransform: 'uppercase',
-                        display: 'block',
-                        marginBottom: '-0.5rem' // Tighten label to image
-                    }}>
-                        Clientes
-                    </span>
+                {/* Clients Segment - Large & Horizontal */}
+                <div style={{ width: '100%', maxWidth: '1100px', textAlign: 'center' }}>
                     <div style={{
-                        width: '100%',
-                        height: '100px', // Force a small height to "crop" image whitespace
                         display: 'flex',
+                        flexDirection: 'column',
                         alignItems: 'center',
-                        justifyContent: 'center',
-                        overflow: 'hidden'
+                        gap: '2.5rem',
                     }}>
-                        <img
-                            src={clientLogos}
-                            alt="Nuestros Clientes"
-                            style={{
-                                height: '220px', // Scaling it up within a smaller container to crop whitespace
-                                width: 'auto',
-                                opacity: 0.7,
-                                filter: 'grayscale(100%) contrast(1.1)',
-                                objectFit: 'contain'
-                            }}
-                        />
+                        <span style={{
+                            fontSize: '0.85rem',
+                            fontWeight: 800,
+                            color: 'var(--color-brand-blue)',
+                            letterSpacing: '0.3em',
+                            textTransform: 'uppercase',
+                        }}>
+                            Clientes
+                        </span>
+
+                        <div style={{
+                            width: '100%',
+                            opacity: 0.8,
+                            filter: 'grayscale(100%) contrast(1.1)',
+                            display: 'flex',
+                            justifyContent: 'center'
+                        }} className="logos-row">
+                            <img
+                                src={clientLogos}
+                                alt="Nuestros Clientes"
+                                style={{
+                                    width: '100%',
+                                    height: 'auto',
+                                    maxHeight: '90px',
+                                    maxWidth: '950px',
+                                    objectFit: 'contain'
+                                }}
+                            />
+                        </div>
                     </div>
                 </div>
 
             </div>
 
             <style>{`
-                img:hover {
+                .logos-row:hover {
                     opacity: 1 !important;
                     filter: grayscale(0%) brightness(1) !important;
-                    transition: all 0.3s ease;
+                    transform: scale(1.01);
+                    transition: all 0.4s ease;
+                }
+                @media (max-width: 768px) {
+                    .container { gap: 3rem; }
+                    img { max-height: 50px !important; }
                 }
             `}</style>
         </section>
