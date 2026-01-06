@@ -6,114 +6,72 @@ export const TrustBar: React.FC = () => {
     return (
         <section
             style={{
-                padding: '3rem 0',
+                padding: '0 0 2rem',
                 backgroundColor: 'white',
                 borderBottom: '1px solid #F1F5F9',
                 position: 'relative',
                 zIndex: 5
             }}
         >
-            <div className="container" style={{
+            <div style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '4rem',
-                alignItems: 'center'
+                gap: '1.5rem',
+                alignItems: 'center',
+                width: '100%'
             }}>
 
-                {/* Ecosystem Segment - Large & Horizontal */}
-                <div style={{ width: '100%', maxWidth: '1100px', textAlign: 'center' }}>
-                    <div style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        gap: '2.5rem',
+                {/* Ecosystem Segment */}
+                <div style={{ width: '100%', textAlign: 'center' }}>
+                    <h4 style={{
+                        fontSize: '0.65rem',
+                        fontWeight: 900,
+                        color: '#94A3B8',
+                        letterSpacing: '0.2em',
+                        textTransform: 'uppercase',
+                        margin: '0 0 0.5rem 0'
                     }}>
-                        <span style={{
-                            fontSize: '0.85rem',
-                            fontWeight: 800,
-                            color: 'var(--color-brand-blue)',
-                            letterSpacing: '0.3em',
-                            textTransform: 'uppercase',
-                        }}>
-                            Ecosystem
-                        </span>
-
-                        <div style={{
-                            width: '100%',
-                            opacity: 0.8,
-                            filter: 'grayscale(100%) contrast(1.1)',
-                            display: 'flex',
-                            justifyContent: 'center'
-                        }} className="logos-row">
-                            <img
-                                src={partnerLogos}
-                                alt="Ecosystem Partners"
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                    maxHeight: '75px',
-                                    maxWidth: '850px',
-                                    objectFit: 'contain'
-                                }}
-                            />
-                        </div>
+                        Ecosystem
+                    </h4>
+                    <div style={{ display: 'flex', justifyContent: 'center', opacity: 0.7, filter: 'grayscale(100%)' }}>
+                        <img
+                            src={partnerLogos}
+                            alt="Ecosystem Partners"
+                            style={{
+                                height: '40px',
+                                width: 'auto',
+                                maxWidth: '90vw'
+                            }}
+                        />
                     </div>
                 </div>
 
-                {/* Clients Segment - Large & Horizontal */}
-                <div style={{ width: '100%', maxWidth: '1100px', textAlign: 'center' }}>
-                    <div style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        gap: '2.5rem',
+                {/* Clients Segment */}
+                <div style={{ width: '100%', textAlign: 'center' }}>
+                    <h4 style={{
+                        fontSize: '0.65rem',
+                        fontWeight: 900,
+                        color: '#94A3B8',
+                        letterSpacing: '0.2em',
+                        textTransform: 'uppercase',
+                        margin: '0 0 0.5rem 0'
                     }}>
-                        <span style={{
-                            fontSize: '0.85rem',
-                            fontWeight: 800,
-                            color: 'var(--color-brand-blue)',
-                            letterSpacing: '0.3em',
-                            textTransform: 'uppercase',
-                        }}>
-                            Clientes
-                        </span>
-
-                        <div style={{
-                            width: '100%',
-                            opacity: 0.8,
-                            filter: 'grayscale(100%) contrast(1.1)',
-                            display: 'flex',
-                            justifyContent: 'center'
-                        }} className="logos-row">
-                            <img
-                                src={clientLogos}
-                                alt="Nuestros Clientes"
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                    maxHeight: '90px',
-                                    maxWidth: '950px',
-                                    objectFit: 'contain'
-                                }}
-                            />
-                        </div>
+                        Clientes
+                    </h4>
+                    <div style={{ display: 'flex', justifyContent: 'center', opacity: 0.7, filter: 'grayscale(100%)' }}>
+                        <img
+                            src={clientLogos}
+                            alt="Nuestros Clientes"
+                            style={{
+                                height: '45px',
+                                width: 'auto',
+                                maxWidth: '90vw'
+                            }}
+                        />
                     </div>
                 </div>
 
             </div>
-
-            <style>{`
-                .logos-row:hover {
-                    opacity: 1 !important;
-                    filter: grayscale(0%) brightness(1) !important;
-                    transform: scale(1.01);
-                    transition: all 0.4s ease;
-                }
-                @media (max-width: 768px) {
-                    .container { gap: 3rem; }
-                    img { max-height: 50px !important; }
-                }
-            `}</style>
         </section>
     );
 };
