@@ -6,7 +6,7 @@ export const TrustBar: React.FC = () => {
     return (
         <section
             style={{
-                padding: '2rem 0',
+                padding: '0.5rem 0 1.5rem',
                 backgroundColor: 'white',
                 borderBottom: '1px solid #F1F5F9',
                 position: 'relative',
@@ -16,95 +16,77 @@ export const TrustBar: React.FC = () => {
             <div className="container" style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '2.5rem',
+                gap: '0.25rem', // Minimal gap between labels and logos
                 alignItems: 'center'
             }}>
 
                 {/* Ecosystem Segment */}
-                <div style={{ width: '100%', maxWidth: '900px' }}>
-                    <div style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        gap: '1rem',
+                <div style={{ width: '100%', textAlign: 'center' }}>
+                    <span style={{
+                        fontSize: '0.65rem',
+                        fontWeight: 800,
+                        color: '#94A3B8',
+                        letterSpacing: '0.2em',
+                        textTransform: 'uppercase',
+                        display: 'block',
+                        marginBottom: '-0.5rem' // Tighten label to image
                     }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', width: '100%' }}>
-                            <div style={{ flex: 1, height: '1px', backgroundColor: '#F1F5F9' }}></div>
-                            <span style={{
-                                fontSize: '0.7rem',
-                                fontWeight: 800,
-                                color: '#94A3B8',
-                                letterSpacing: '0.2em',
-                                textTransform: 'uppercase',
-                                whiteSpace: 'nowrap'
-                            }}>
-                                Ecosystem
-                            </span>
-                            <div style={{ flex: 1, height: '1px', backgroundColor: '#F1F5F9' }}></div>
-                        </div>
-
-                        <div style={{
-                            width: '100%',
-                            opacity: 0.7,
-                            filter: 'grayscale(100%) contrast(1.1)',
-                            display: 'flex',
-                            justifyContent: 'center'
-                        }}>
-                            <img
-                                src={partnerLogos}
-                                alt="Ecosystem Partners"
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                    maxWidth: '500px',
-                                    objectFit: 'contain'
-                                }}
-                            />
-                        </div>
+                        Ecosystem
+                    </span>
+                    <div style={{
+                        width: '100%',
+                        height: '100px', // Force a small height to "crop" image whitespace
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        overflow: 'hidden'
+                    }}>
+                        <img
+                            src={partnerLogos}
+                            alt="Ecosystem Partners"
+                            style={{
+                                height: '180px', // Scaling it up within a smaller container to crop whitespace
+                                width: 'auto',
+                                opacity: 0.7,
+                                filter: 'grayscale(100%) contrast(1.1)',
+                                objectFit: 'contain'
+                            }}
+                        />
                     </div>
                 </div>
 
                 {/* Clients Segment */}
-                <div style={{ width: '100%', maxWidth: '900px' }}>
-                    <div style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        gap: '1rem',
+                <div style={{ width: '100%', textAlign: 'center', marginTop: '-1rem' }}>
+                    <span style={{
+                        fontSize: '0.65rem',
+                        fontWeight: 800,
+                        color: '#94A3B8',
+                        letterSpacing: '0.2em',
+                        textTransform: 'uppercase',
+                        display: 'block',
+                        marginBottom: '-0.5rem' // Tighten label to image
                     }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', width: '100%' }}>
-                            <div style={{ flex: 1, height: '1px', backgroundColor: '#F1F5F9' }}></div>
-                            <span style={{
-                                fontSize: '0.7rem',
-                                fontWeight: 800,
-                                color: '#94A3B8',
-                                letterSpacing: '0.2em',
-                                textTransform: 'uppercase',
-                                whiteSpace: 'nowrap'
-                            }}>
-                                Clientes
-                            </span>
-                            <div style={{ flex: 1, height: '1px', backgroundColor: '#F1F5F9' }}></div>
-                        </div>
-
-                        <div style={{
-                            width: '100%',
-                            opacity: 0.7,
-                            filter: 'grayscale(100%) contrast(1.1)',
-                            display: 'flex',
-                            justifyContent: 'center'
-                        }}>
-                            <img
-                                src={clientLogos}
-                                alt="Nuestros Clientes"
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                    maxWidth: '600px',
-                                    objectFit: 'contain'
-                                }}
-                            />
-                        </div>
+                        Clientes
+                    </span>
+                    <div style={{
+                        width: '100%',
+                        height: '100px', // Force a small height to "crop" image whitespace
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        overflow: 'hidden'
+                    }}>
+                        <img
+                            src={clientLogos}
+                            alt="Nuestros Clientes"
+                            style={{
+                                height: '220px', // Scaling it up within a smaller container to crop whitespace
+                                width: 'auto',
+                                opacity: 0.7,
+                                filter: 'grayscale(100%) contrast(1.1)',
+                                objectFit: 'contain'
+                            }}
+                        />
                     </div>
                 </div>
 
@@ -115,11 +97,6 @@ export const TrustBar: React.FC = () => {
                     opacity: 1 !important;
                     filter: grayscale(0%) brightness(1) !important;
                     transition: all 0.3s ease;
-                }
-                @media (max-width: 768px) {
-                    .container {
-                        gap: 2rem;
-                    }
                 }
             `}</style>
         </section>

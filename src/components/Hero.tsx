@@ -8,7 +8,7 @@ export const Hero: React.FC = () => {
             flexDirection: 'column',
             alignItems: 'center',
             textAlign: 'center',
-            padding: '180px 1rem 2rem',
+            padding: '180px 1rem 0',
             background: 'radial-gradient(circle at 50% 50%, rgba(41, 98, 255, 0.03) 0%, transparent 70%)' // Subtle lab glow
         }}>
 
