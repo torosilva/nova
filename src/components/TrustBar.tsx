@@ -33,7 +33,7 @@ export const TrustBar: React.FC = () => {
         <section
             ref={sectionRef}
             style={{
-                padding: '4rem 0',
+                padding: '5rem 0',
                 backgroundColor: 'white',
                 borderBottom: '1px solid #F1F5F9',
                 position: 'relative',
@@ -41,95 +41,103 @@ export const TrustBar: React.FC = () => {
                 overflow: 'hidden'
             }}
         >
-            <div className="container">
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                    gap: '4rem',
-                    alignItems: 'start'
-                }}>
+            <div className="container" style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '5rem', // Breathable gap between categories
+                alignItems: 'center'
+            }}>
 
-                    {/* Ecosystem Segment */}
-                    <div style={{ ...sectionStyle, transitionDelay: '0.2s' }}>
-                        <div style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            gap: '1.5rem',
-                        }}>
+                {/* Ecosystem Segment - Full Width Row */}
+                <div style={{ ...sectionStyle, transitionDelay: '0.2s', width: '100%' }}>
+                    <div style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        gap: '2rem',
+                    }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', width: '100%', maxWidth: '900px' }}>
+                            <div style={{ flex: 1, height: '1px', backgroundColor: '#F1F5F9' }}></div>
                             <span style={{
-                                fontSize: '0.75rem',
+                                fontSize: '0.8rem',
                                 fontWeight: 800,
                                 color: 'var(--color-brand-blue)',
-                                letterSpacing: '0.25em',
-                                textTransform: 'uppercase'
+                                letterSpacing: '0.3em',
+                                textTransform: 'uppercase',
+                                whiteSpace: 'nowrap'
                             }}>
                                 Ecosystem
                             </span>
+                            <div style={{ flex: 1, height: '1px', backgroundColor: '#F1F5F9' }}></div>
+                        </div>
 
-                            <div style={{
-                                width: '100%',
-                                opacity: 0.6,
-                                filter: 'grayscale(100%) contrast(1.1)',
-                                transition: 'all 0.5s ease',
-                                display: 'flex',
-                                justifyContent: 'center'
-                            }} className="trust-logos">
-                                <img
-                                    src={partnerLogos}
-                                    alt="Ecosystem Partners"
-                                    style={{
-                                        width: '100%',
-                                        height: 'auto',
-                                        maxWidth: '450px',
-                                        objectFit: 'contain'
-                                    }}
-                                />
-                            </div>
+                        <div style={{
+                            width: '100%',
+                            opacity: 0.6,
+                            filter: 'grayscale(100%) contrast(1.1)',
+                            transition: 'all 0.5s ease',
+                            display: 'flex',
+                            justifyContent: 'center'
+                        }} className="trust-logos">
+                            <img
+                                src={partnerLogos}
+                                alt="Ecosystem Partners"
+                                style={{
+                                    width: '100%',
+                                    height: 'auto',
+                                    maxWidth: '650px',
+                                    objectFit: 'contain'
+                                }}
+                            />
                         </div>
                     </div>
+                </div>
 
-                    {/* Clients Segment */}
-                    <div style={{ ...sectionStyle, transitionDelay: '0.4s' }}>
-                        <div style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            gap: '1.5rem',
-                        }}>
+                {/* Clients Segment - Full Width Row */}
+                <div style={{ ...sectionStyle, transitionDelay: '0.5s', width: '100%' }}>
+                    <div style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        gap: '2rem',
+                    }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', width: '100%', maxWidth: '900px' }}>
+                            <div style={{ flex: 1, height: '1px', backgroundColor: '#F1F5F9' }}></div>
                             <span style={{
-                                fontSize: '0.75rem',
+                                fontSize: '0.8rem',
                                 fontWeight: 800,
                                 color: 'var(--color-brand-blue)',
-                                letterSpacing: '0.25em',
-                                textTransform: 'uppercase'
+                                letterSpacing: '0.3em',
+                                textTransform: 'uppercase',
+                                whiteSpace: 'nowrap'
                             }}>
                                 Clientes
                             </span>
+                            <div style={{ flex: 1, height: '1px', backgroundColor: '#F1F5F9' }}></div>
+                        </div>
 
-                            <div style={{
-                                width: '100%',
-                                opacity: 0.6,
-                                filter: 'grayscale(100%) contrast(1.1)',
-                                transition: 'all 0.5s ease',
-                                display: 'flex',
-                                justifyContent: 'center'
-                            }} className="trust-logos">
-                                <img
-                                    src={clientLogos}
-                                    alt="Nuestros Clientes"
-                                    style={{
-                                        width: '100%',
-                                        height: 'auto',
-                                        maxWidth: '500px',
-                                        objectFit: 'contain'
-                                    }}
-                                />
-                            </div>
+                        <div style={{
+                            width: '100%',
+                            opacity: 0.6,
+                            filter: 'grayscale(100%) contrast(1.1)',
+                            transition: 'all 0.5s ease',
+                            display: 'flex',
+                            justifyContent: 'center'
+                        }} className="trust-logos">
+                            <img
+                                src={clientLogos}
+                                alt="Nuestros Clientes"
+                                style={{
+                                    width: '100%',
+                                    height: 'auto',
+                                    maxWidth: '750px',
+                                    objectFit: 'contain'
+                                }}
+                            />
                         </div>
                     </div>
-
                 </div>
+
             </div>
 
             <style>{`
