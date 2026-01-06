@@ -10,7 +10,7 @@ export const Hero: React.FC = () => {
             justifyContent: 'center',
             alignItems: 'center',
             textAlign: 'center',
-            padding: '160px 1rem 4rem',
+            padding: '160px 1rem 2rem',
             background: 'radial-gradient(circle at 50% 50%, rgba(41, 98, 255, 0.03) 0%, transparent 70%)' // Subtle lab glow
         }}>
 
