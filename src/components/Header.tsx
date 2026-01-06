@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../assets/logo.png';
+import { AnimatedLogo } from './AnimatedLogo';
 
 export const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,11 +31,7 @@ export const Header: React.FC = () => {
                 alignItems: 'center'
             }}>
                 <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }} className="hover-lift">
-                    <img src={logo} alt="NOVA Marketing Lab" style={{
-                        height: 'clamp(70px, 10vw, 110px)',
-                        width: 'auto',
-                        objectFit: 'contain'
-                    }} />
+                    <AnimatedLogo />
                 </a>
             </div>
 
