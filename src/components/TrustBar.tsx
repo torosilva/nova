@@ -26,7 +26,7 @@ export const TrustBar: React.FC = () => {
         <section
             ref={sectionRef}
             style={{
-                padding: '2.5rem 0',
+                padding: '1.5rem 0',
                 backgroundColor: 'white',
                 borderBottom: '1px solid #F1F5F9',
                 position: 'relative',
@@ -39,13 +39,13 @@ export const TrustBar: React.FC = () => {
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
-                    gap: '1.5rem',
+                    gap: '1rem',
                     opacity: isVisible ? 1 : 0,
-                    transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
-                    transition: 'all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1)'
+                    transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(60px) scale(0.9)',
+                    transition: 'all 1s cubic-bezier(0.34, 1.56, 0.64, 1)'
                 }}>
                     <span style={{
-                        fontSize: '0.75rem',
+                        fontSize: '0.7rem',
                         fontWeight: 700,
                         color: '#94A3B8',
                         letterSpacing: '0.2em',
@@ -57,9 +57,9 @@ export const TrustBar: React.FC = () => {
                     <div style={{
                         width: '100%',
                         maxWidth: '850px',
-                        opacity: 0.7,
+                        opacity: 0.6,
                         filter: 'grayscale(100%) brightness(1.1)',
-                        transition: 'all 0.4s ease',
+                        transition: 'all 0.5s ease',
                         display: 'flex',
                         justifyContent: 'center'
                     }} className="trust-logos">
