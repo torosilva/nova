@@ -6,75 +6,91 @@ export const TrustBar: React.FC = () => {
     return (
         <section
             style={{
-                padding: '3rem 0',
+                padding: '4rem 0',
                 backgroundColor: 'white',
                 borderBottom: '1px solid #F1F5F9',
                 position: 'relative',
-                zIndex: 5
+                zIndex: 10 // Ensure it sits above the Hero glow
             }}
         >
             <div className="container" style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '2rem',
+                gap: '5rem',
                 alignItems: 'center',
                 width: '100%'
             }}>
 
-                {/* Ecosystem Row */}
-                <div style={{ width: '100%', maxWidth: '900px', textAlign: 'center' }}>
+                {/* Ecosystem Segment - Absolute Window Cropping */}
+                <div style={{ width: '100%', maxWidth: '800px', textAlign: 'center' }}>
                     <h4 style={{
-                        fontSize: '0.7rem',
+                        fontSize: '0.75rem',
                         fontWeight: 800,
                         color: 'var(--color-brand-blue)',
-                        letterSpacing: '0.3em',
+                        letterSpacing: '0.4em',
                         textTransform: 'uppercase',
-                        marginBottom: '0.5rem',
-                        opacity: 0.6
+                        marginBottom: '2rem',
+                        opacity: 0.8
                     }}>
                         Ecosystem
                     </h4>
-                    <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                    <div style={{
+                        width: '100%',
+                        height: '45px', // Exact height of the logo strip
+                        position: 'relative',
+                        overflow: 'hidden',
+                        backgroundColor: 'white'
+                    }}>
                         <img
                             src={partnerLogos}
                             alt="Ecosystem Partners"
                             style={{
-                                width: 'auto',
-                                maxWidth: '100%',
-                                height: '120px', // Professional visual height for square assets
-                                filter: 'grayscale(100%) brightness(0.9)',
+                                position: 'absolute',
+                                top: '50%',
+                                left: '50%',
+                                width: '100%',
+                                height: 'auto',
+                                transform: 'translate(-50%, -50%) scale(4.5)', // Aggressive zoom to crop white space
+                                filter: 'grayscale(100%)',
                                 opacity: 0.6,
-                                objectFit: 'contain',
                                 transition: 'all 0.4s ease'
                             }}
                         />
                     </div>
                 </div>
 
-                {/* Clients Row */}
-                <div style={{ width: '100%', maxWidth: '1100px', textAlign: 'center' }}>
+                {/* Clients Segment - Absolute Window Cropping */}
+                <div style={{ width: '100%', maxWidth: '1000px', textAlign: 'center' }}>
                     <h4 style={{
-                        fontSize: '0.7rem',
+                        fontSize: '0.75rem',
                         fontWeight: 800,
                         color: 'var(--color-brand-blue)',
-                        letterSpacing: '0.3em',
+                        letterSpacing: '0.4em',
                         textTransform: 'uppercase',
-                        marginBottom: '0.5rem',
-                        opacity: 0.6
+                        marginBottom: '2rem',
+                        opacity: 0.8
                     }}>
                         Clientes
                     </h4>
-                    <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                    <div style={{
+                        width: '100%',
+                        height: '60px', // Exact height of the logo strip
+                        position: 'relative',
+                        overflow: 'hidden',
+                        backgroundColor: 'white'
+                    }}>
                         <img
                             src={clientLogos}
                             alt="Nuestros Clientes"
                             style={{
-                                width: 'auto',
-                                maxWidth: '100%',
-                                height: '140px', // Professional visual height for square assets
-                                filter: 'grayscale(100%) brightness(0.9)',
+                                position: 'absolute',
+                                top: '50%',
+                                left: '50%',
+                                width: '100%',
+                                height: 'auto',
+                                transform: 'translate(-50%, -50%) scale(4.5)', // Aggressive zoom to crop white space
+                                filter: 'grayscale(100%)',
                                 opacity: 0.6,
-                                objectFit: 'contain',
                                 transition: 'all 0.4s ease'
                             }}
                         />
@@ -86,8 +102,8 @@ export const TrustBar: React.FC = () => {
             <style>{`
                 img:hover {
                     opacity: 1 !important;
-                    filter: grayscale(0%) brightness(1) !important;
-                    transform: scale(1.01);
+                    filter: grayscale(0%) !important;
+                    transform: translate(-50%, -50%) scale(4.7) !important;
                 }
             `}</style>
         </section>
