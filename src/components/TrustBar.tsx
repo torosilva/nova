@@ -1,111 +1,76 @@
 import React from 'react';
-import partnerLogos from '../assets/partner-logos-v4.png';
-import clientLogos from '../assets/client-logos-v4.png';
+import partnerLogos from '../assets/partner-logos-v5.png';
+import clientLogos from '../assets/client-logos-v5.png';
 
 export const TrustBar: React.FC = () => {
     return (
         <section
             style={{
-                padding: '4rem 0',
+                padding: '3rem 0',
                 backgroundColor: 'white',
-                borderBottom: '1px solid #F1F5F9',
-                position: 'relative',
-                zIndex: 10 // Ensure it sits above the Hero glow
+                borderBottom: '1px solid #F1F5F9'
             }}
         >
             <div className="container" style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '5rem',
-                alignItems: 'center',
-                width: '100%'
+                gap: '3rem',
+                alignItems: 'center'
             }}>
 
-                {/* Ecosystem Segment - Absolute Window Cropping */}
-                <div style={{ width: '100%', maxWidth: '800px', textAlign: 'center' }}>
+                {/* Ecosystem Row */}
+                <div style={{ textAlign: 'center' }}>
                     <h4 style={{
                         fontSize: '0.75rem',
                         fontWeight: 800,
                         color: 'var(--color-brand-blue)',
-                        letterSpacing: '0.4em',
+                        letterSpacing: '0.3em',
                         textTransform: 'uppercase',
-                        marginBottom: '2rem',
-                        opacity: 0.8
+                        marginBottom: '1rem',
+                        opacity: 0.6
                     }}>
                         Ecosystem
                     </h4>
-                    <div style={{
-                        width: '100%',
-                        height: '45px', // Exact height of the logo strip
-                        position: 'relative',
-                        overflow: 'hidden',
-                        backgroundColor: 'white'
-                    }}>
-                        <img
-                            src={partnerLogos}
-                            alt="Ecosystem Partners"
-                            style={{
-                                position: 'absolute',
-                                top: '50%',
-                                left: '50%',
-                                width: '100%',
-                                height: 'auto',
-                                transform: 'translate(-50%, -50%) scale(4.5)', // Aggressive zoom to crop white space
-                                filter: 'grayscale(100%)',
-                                opacity: 0.6,
-                                transition: 'all 0.4s ease'
-                            }}
-                        />
-                    </div>
+                    <img
+                        src={partnerLogos}
+                        alt="Ecosystem Partners"
+                        style={{
+                            maxHeight: '40px',
+                            width: 'auto',
+                            filter: 'grayscale(100%)',
+                            opacity: 0.7,
+                            objectFit: 'contain'
+                        }}
+                    />
                 </div>
 
-                {/* Clients Segment - Absolute Window Cropping */}
-                <div style={{ width: '100%', maxWidth: '1000px', textAlign: 'center' }}>
+                {/* Clients Row */}
+                <div style={{ textAlign: 'center' }}>
                     <h4 style={{
                         fontSize: '0.75rem',
                         fontWeight: 800,
                         color: 'var(--color-brand-blue)',
-                        letterSpacing: '0.4em',
+                        letterSpacing: '0.3em',
                         textTransform: 'uppercase',
-                        marginBottom: '2rem',
-                        opacity: 0.8
+                        marginBottom: '1rem',
+                        opacity: 0.6
                     }}>
                         Clientes
                     </h4>
-                    <div style={{
-                        width: '100%',
-                        height: '60px', // Exact height of the logo strip
-                        position: 'relative',
-                        overflow: 'hidden',
-                        backgroundColor: 'white'
-                    }}>
-                        <img
-                            src={clientLogos}
-                            alt="Nuestros Clientes"
-                            style={{
-                                position: 'absolute',
-                                top: '50%',
-                                left: '50%',
-                                width: '100%',
-                                height: 'auto',
-                                transform: 'translate(-50%, -50%) scale(4.5)', // Aggressive zoom to crop white space
-                                filter: 'grayscale(100%)',
-                                opacity: 0.6,
-                                transition: 'all 0.4s ease'
-                            }}
-                        />
-                    </div>
+                    <img
+                        src={clientLogos}
+                        alt="Nuestros Clientes"
+                        style={{
+                            maxHeight: '50px',
+                            width: 'auto',
+                            filter: 'grayscale(100%)',
+                            opacity: 0.7,
+                            objectFit: 'contain'
+                        }}
+                    />
                 </div>
 
             </div>
-
-            <style>{`
-                img:hover {
-                    opacity: 1 !important;
-                    filter: grayscale(0%) !important;
-                    transform: translate(-50%, -50%) scale(4.7) !important;
-                }
-            `}</style>
         </section>
     );
 };
