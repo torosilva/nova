@@ -6,66 +6,90 @@ export const TrustBar: React.FC = () => {
     return (
         <section
             style={{
-                padding: '3rem 0',
+                padding: '4rem 0',
                 backgroundColor: 'white',
-                borderBottom: '1px solid #F1F5F9'
+                borderBottom: '1px solid #F1F5F9',
+                position: 'relative',
+                zIndex: 10
             }}
         >
             <div className="container" style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '3rem',
-                alignItems: 'center'
+                gap: '5rem',
+                alignItems: 'center',
+                width: '100%'
             }}>
 
-                {/* Ecosystem Row */}
-                <div style={{ textAlign: 'center' }}>
+                {/* Ecosystem Segment - Forced Viewport */}
+                <div style={{ width: '100%', maxWidth: '900px', textAlign: 'center' }}>
                     <h4 style={{
                         fontSize: '0.75rem',
                         fontWeight: 800,
                         color: 'var(--color-brand-blue)',
-                        letterSpacing: '0.3em',
+                        letterSpacing: '0.4em',
                         textTransform: 'uppercase',
-                        marginBottom: '1rem',
-                        opacity: 0.6
+                        marginBottom: '2rem'
                     }}>
                         Ecosystem
                     </h4>
-                    <img
-                        src={partnerLogos}
-                        alt="Ecosystem Partners"
-                        style={{
-                            maxHeight: '40px',
-                            width: 'auto',
-                            filter: 'grayscale(100%)',
-                            opacity: 0.7,
-                            objectFit: 'contain'
+                    <div style={{
+                        width: '100%',
+                        height: '70px', // Precise window height
+                        backgroundImage: `url(${partnerLogos})`,
+                        backgroundSize: '450% auto', // Forced zoom to fill viewport
+                        backgroundPosition: 'center center',
+                        backgroundRepeat: 'no-repeat',
+                        filter: 'grayscale(100%)',
+                        opacity: 0.6,
+                        transition: 'all 0.4s ease',
+                        cursor: 'default'
+                    }}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.opacity = '1';
+                            e.currentTarget.style.filter = 'grayscale(0%)';
+                            e.currentTarget.style.backgroundSize = '460% auto';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.opacity = '0.6';
+                            e.currentTarget.style.filter = 'grayscale(100%)';
+                            e.currentTarget.style.backgroundSize = '450% auto';
                         }}
                     />
                 </div>
 
-                {/* Clients Row */}
-                <div style={{ textAlign: 'center' }}>
+                {/* Clients Segment - Forced Viewport */}
+                <div style={{ width: '100%', maxWidth: '1000px', textAlign: 'center' }}>
                     <h4 style={{
                         fontSize: '0.75rem',
                         fontWeight: 800,
                         color: 'var(--color-brand-blue)',
-                        letterSpacing: '0.3em',
+                        letterSpacing: '0.4em',
                         textTransform: 'uppercase',
-                        marginBottom: '1rem',
-                        opacity: 0.6
+                        marginBottom: '2rem'
                     }}>
                         Clientes
                     </h4>
-                    <img
-                        src={clientLogos}
-                        alt="Nuestros Clientes"
-                        style={{
-                            maxHeight: '50px',
-                            width: 'auto',
-                            filter: 'grayscale(100%)',
-                            opacity: 0.7,
-                            objectFit: 'contain'
+                    <div style={{
+                        width: '100%',
+                        height: '90px', // Precise window height
+                        backgroundImage: `url(${clientLogos})`,
+                        backgroundSize: '450% auto', // Forced zoom for SMEs
+                        backgroundPosition: 'center 62%', // Compensate for SME list being slightly lower in asset
+                        backgroundRepeat: 'no-repeat',
+                        filter: 'grayscale(100%)',
+                        opacity: 0.6,
+                        transition: 'all 0.4s ease'
+                    }}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.opacity = '1';
+                            e.currentTarget.style.filter = 'grayscale(0%)';
+                            e.currentTarget.style.backgroundSize = '460% auto';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.opacity = '0.6';
+                            e.currentTarget.style.filter = 'grayscale(100%)';
+                            e.currentTarget.style.backgroundSize = '450% auto';
                         }}
                     />
                 </div>
