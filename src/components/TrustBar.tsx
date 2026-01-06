@@ -6,7 +6,7 @@ export const TrustBar: React.FC = () => {
     return (
         <section
             style={{
-                padding: '3rem 0',
+                padding: '4rem 0',
                 backgroundColor: 'white',
                 borderBottom: '1px solid #F1F5F9',
                 position: 'relative',
@@ -16,62 +16,78 @@ export const TrustBar: React.FC = () => {
             <div className="container" style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '3rem',
+                gap: '5rem',
                 alignItems: 'center',
                 width: '100%'
             }}>
 
-                {/* Ecosystem Segment - Professional Scale */}
-                <div style={{ width: '100%', maxWidth: '600px', textAlign: 'center' }}>
+                {/* Ecosystem Segment - Professional Ribbon Lens */}
+                <div style={{ width: '100%', maxWidth: '800px', textAlign: 'center' }}>
                     <h4 style={{
-                        fontSize: '0.7rem',
+                        fontSize: '0.75rem',
                         fontWeight: 800,
                         color: 'var(--color-brand-blue)',
-                        letterSpacing: '0.3em',
+                        letterSpacing: '0.4em',
                         textTransform: 'uppercase',
-                        marginBottom: '1rem',
-                        opacity: 0.6
+                        marginBottom: '2rem',
+                        opacity: 0.8
                     }}>
                         Ecosystem
                     </h4>
-                    <div style={{ width: '100%', opacity: 0.7, display: 'flex', justifyContent: 'center' }}>
+                    <div style={{
+                        width: '100%',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        overflow: 'hidden'
+                    }}>
                         <img
                             src={partnerLogos}
                             alt="Ecosystem Partners"
                             style={{
-                                width: 'auto',
-                                maxWidth: '100%',
-                                height: '32px', // Strict professional height
-                                filter: 'grayscale(100%) brightness(0.8)',
-                                objectFit: 'contain'
+                                width: '100%',
+                                maxWidth: '600px',
+                                height: '60px', // The "Lens" height
+                                objectFit: 'cover', // Automatically crops the square white space
+                                objectPosition: 'center',
+                                filter: 'grayscale(100%)',
+                                opacity: 0.6,
+                                transition: 'all 0.4s ease'
                             }}
                         />
                     </div>
                 </div>
 
-                {/* Clients Segment - Professional Scale */}
-                <div style={{ width: '100%', maxWidth: '800px', textAlign: 'center' }}>
+                {/* Clients Segment - Professional Ribbon Lens */}
+                <div style={{ width: '100%', maxWidth: '1000px', textAlign: 'center' }}>
                     <h4 style={{
-                        fontSize: '0.7rem',
+                        fontSize: '0.75rem',
                         fontWeight: 800,
                         color: 'var(--color-brand-blue)',
-                        letterSpacing: '0.3em',
+                        letterSpacing: '0.4em',
                         textTransform: 'uppercase',
-                        marginBottom: '1rem',
-                        opacity: 0.6
+                        marginBottom: '2rem',
+                        opacity: 0.8
                     }}>
                         Clientes
                     </h4>
-                    <div style={{ width: '100%', opacity: 0.7, display: 'flex', justifyContent: 'center' }}>
+                    <div style={{
+                        width: '100%',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        overflow: 'hidden'
+                    }}>
                         <img
                             src={clientLogos}
                             alt="Nuestros Clientes"
                             style={{
-                                width: 'auto',
-                                maxWidth: '100%',
-                                height: '42px', // Strict professional height
-                                filter: 'grayscale(100%) brightness(0.8)',
-                                objectFit: 'contain'
+                                width: '100%',
+                                maxWidth: '850px',
+                                height: '80px', // The "Lens" height
+                                objectFit: 'cover', // Automatically crops the square white space
+                                objectPosition: 'center',
+                                filter: 'grayscale(100%)',
+                                opacity: 0.6,
+                                transition: 'all 0.4s ease'
                             }}
                         />
                     </div>
@@ -82,8 +98,8 @@ export const TrustBar: React.FC = () => {
             <style>{`
                 img:hover {
                     opacity: 1 !important;
-                    filter: grayscale(0%) brightness(1) !important;
-                    transition: all 0.3s ease;
+                    filter: grayscale(0%) !important;
+                    transform: scale(1.02);
                 }
             `}</style>
         </section>
